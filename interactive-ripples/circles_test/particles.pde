@@ -38,7 +38,7 @@ class Particle {
     velocity = new PVector(random(-2,2),random(-2,2));
     growth = random(0,3);
     location = l.copy();
-    lifespan = 1000.0;
+    lifespan = 500.0;
   }
 
   void run() {
@@ -54,9 +54,10 @@ class Particle {
   }
  
   void display() {
-    strokeWeight(0);
-    stroke(0,lifespan);
-    fill(255,lifespan);
+    strokeWeight(6);
+    stroke(255,lifespan);
+    fill(100,lifespan);
+    noFill();
     ellipse(location.x, location.y, size, size);
   }
 
